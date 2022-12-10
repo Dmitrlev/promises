@@ -1,0 +1,46 @@
+.hid {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffffb5;
+  z-index: 100;
+
+}
+.login {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+}
+.login button {
+  border: none;
+  outline: none;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  color: white;
+}
+.david {
+  background: #ff60e0;
+}
+.margaret {
+  margin-top: 0px;
+  background: #0658f6;
+
+}
+.profile {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 10px;
+}
+.scascsa {
+  padding-top: 25vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

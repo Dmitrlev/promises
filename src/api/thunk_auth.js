@@ -1,26 +1,54 @@
-import API from "../../api/api";
-import {ThunkSetMeProfile} from "./thunk_profile";
-import {setWrongLoginAuth} from "../myProfile_reducer";
+import API from "./api";
+import {setDavidStatus, setHid, setId, setMargaretStatus} from "../redux/main_reducer";
 
-export const ThunkAddLogin = (email, password, rememberMe) => {
+export const ThunkMe = () => {
   return (dispatch) => {
-      API.addAuth(email, password, rememberMe).then(res => {
-        if(res.data.resultCode === 0) {
-          dispatch(ThunkSetMeProfile())
-        } else
-        if(res.data.resultCode === 1) {
-          dispatch(setWrongLoginAuth(true))
-        }
-      })
-  };
-};
-
-export const ThunkRemoveLogin = () => {
-  return (dispatch) => {
-    API.removeAuth().then(res => {
-      if(res.data.resultCode === 0) {
-        dispatch(ThunkSetMeProfile())
-      }
+     API.meProfile().then( res => {
+       dispatch(setId(res.data.data.id))
     })
   };
 };
+
+export const TakeStatusDavid = () => {
+  return (dispatch) => {
+    API.takeStatus(26969).then( res => {
+      dispatch(setDavidStatus(res.data))
+    })
+  };
+};
+export const TakeStatusMargaret = () => {
+  return (dispatch) => {
+    API.takeStatus(26604).then( res => {
+      dispatch(setMargaretStatus(res.data))
+    })
+  };
+};
+export const TakeOpenMargaret = () => {
+
+  return (dispatch) => {
+    dispatch(setHid(true))
+    API.addAuth('davidovich333.david333@gmail.com', 'Love4DandI', false).then( res => {
+      dispatch(setHid(false))
+      document.location.href="/";
+    })
+  };
+};
+
+export const TakeOpenDavid = () => {
+
+  return (dispatch) => {
+    dispatch(setHid(true))
+    API.addAuth('davidovich444.david444@gmail.com', 'david231231', false).then( res => {
+      dispatch(setHid(false))
+      document.location.href="/";
+    })
+  };
+};
+
+export const ThunkUpdateStatus = (text) => {
+  return (dispatch) => {
+    API.updateStatus(text).then(res => {
+
+    })
+  }
+}
