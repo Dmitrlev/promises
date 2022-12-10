@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Dmitrlev/promises/static/css/main.a913492f.css",
+    "main.js": "/Dmitrlev/promises/static/js/main.4ef38ac1.js",
+    "static/media/Comic.ttf": "/Dmitrlev/promises/static/media/Comic.df72b2f945374627f9ef.ttf",
+    "index.html": "/Dmitrlev/promises/index.html",
+    "main.a913492f.css.map": "/Dmitrlev/promises/static/css/main.a913492f.css.map",
+    "main.4ef38ac1.js.map": "/Dmitrlev/promises/static/js/main.4ef38ac1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a913492f.css",
+    "static/js/main.4ef38ac1.js"
+  ]
+}
